@@ -7,31 +7,31 @@ def main():
     # 1. Initialize Graph
     gm = GraphManager()
 
-    # Let's create a simplified Romanian Map example (Classic AI graph problem)
-    # Goal is to reach 'Bucharest'
-    gm.add_city('Arad', heuristic_value=366)
-    gm.add_city('Zerind', heuristic_value=374)
-    gm.add_city('Sibiu', heuristic_value=253)
-    gm.add_city('Timisoara', heuristic_value=329)
-    gm.add_city('Fagaras', heuristic_value=176)
-    gm.add_city('Rimnicu Vilcea', heuristic_value=193)
-    gm.add_city('Bucharest', heuristic_value=0)
+    # Let's create a simplified Indian Map example
+    # Goal is to reach 'Bengaluru'
+    gm.add_city('Mumbai', heuristic_value=366)
+    gm.add_city('Surat', heuristic_value=374)
+    gm.add_city('Pune', heuristic_value=253)
+    gm.add_city('Nashik', heuristic_value=329)
+    gm.add_city('Kolhapur', heuristic_value=176)
+    gm.add_city('Solapur', heuristic_value=193)
+    gm.add_city('Bengaluru', heuristic_value=0)
 
     # Add edges (routes and their distances/costs)
-    gm.add_route('Arad', 'Zerind', 75)
-    gm.add_route('Arad', 'Sibiu', 140)
-    gm.add_route('Arad', 'Timisoara', 118)
-    gm.add_route('Sibiu', 'Fagaras', 99)
-    gm.add_route('Sibiu', 'Rimnicu Vilcea', 80)
-    gm.add_route('Fagaras', 'Bucharest', 211)
-    gm.add_route('Rimnicu Vilcea', 'Bucharest', 240) # Changed from standard map to test A* vs DFS
+    gm.add_route('Mumbai', 'Surat', 75)
+    gm.add_route('Mumbai', 'Pune', 140)
+    gm.add_route('Mumbai', 'Nashik', 118)
+    gm.add_route('Pune', 'Kolhapur', 99)
+    gm.add_route('Pune', 'Solapur', 80)
+    gm.add_route('Kolhapur', 'Bengaluru', 211)
+    gm.add_route('Solapur', 'Bengaluru', 240) # Custom test path for A* vs DFS
 
     # 2. Setup Optimizer and Visualizer
     optimizer = RouteOptimizer(gm)
     visualizer = GraphVisualizer(gm)
 
-    start_city = 'Arad'
-    goal_city = 'Bucharest'
+    start_city = 'Mumbai'
+    goal_city = 'Bengaluru'
 
     print(f"--- Route Optimization: {start_city} to {goal_city} ---\n")
 

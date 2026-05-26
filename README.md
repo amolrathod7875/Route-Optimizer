@@ -48,6 +48,8 @@ This project models the map as a **Graph**.
 2. **Algorithm Execution (`algorithms.py`):** The `RouteOptimizer` runs BFS, DFS, and A* simultaneously. It measures the execution time (in milliseconds) and calculates the total travel cost for the paths each algorithm discovers.
 3. **Visualization (`visualizer.py`):** Using `Matplotlib`, the system generates an interactive, graphical representation of the map. It highlights the optimal path discovered by the A* algorithm, allowing users to visually verify the AI's decision-making process.
 
+![A* Route Optimization Map](assets/Figure_1.png)
+
 ---
 
 ## Project Structure
